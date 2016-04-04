@@ -87,12 +87,59 @@ radius:2px solid white;
 	background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9', endColorstr='#f9f9f9',GradientType=0);
 	background-color:#e9e9e9;
-	width:100px;
+	
 	padding:12px 14px;
 }
 .myButton_submit:active {
 	position:relative;
 	top:1px;
+}
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	
+	
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 5px 5px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+.dropdown_menu_name{
+	border-bottom:3px black solid;
+}
+.dropdown_menu_name a:hover{
+	background-color:white;
+	color:black;
 }
 </style>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
@@ -115,7 +162,6 @@ radius:2px solid white;
                         $('#contact').show('fast');
                         $("#home, #bio").hide('fast');
                		 });
-					 
                 		
      });
 	 </script>
@@ -128,14 +174,25 @@ radius:2px solid white;
 <img src="ashish.png">
 </td>
 <td width="25%" class="header_name" valign="bottom" align="center">
-Writer<br><h1>Ashish Thakur</h1>
+Writter<br><h1>Ashish Thakur</h1>
 </td>
 <td width="59%" align="center" valign="bottom">
 <table width="100%">
 <tr>
-<td width="33%" class="header_name" valign="bottom" align="center" id="page1"><b><h5>Home</h5></b></td>
-<td width="33%" class="header_name" valign="bottom" align="center" id="page2"><b><h5>Bio</h5></b></td>
-<td width="33%" class="header_name" valign="bottom" align="center" id="page3"><b><h5>Contact</h5></b></td>
+<td width="25%" class="header_name" valign="bottom" align="center" id="page1"><b><h5>Home</h5></b></td>
+<td width="25%" class="header_name" valign="bottom" align="center" id="page2"><b><h5>Bio</h5></b></td>
+
+<td width="25%" class="header_name" valign="bottom" align="center" id="page4"><b><div class="dropdown">
+  <h5>Buy on</h5>
+  <div class="dropdown-content">
+    <div class="dropdown_menu_name"><a href="https://paytm.com/shop/p/you-were-never-mine-9789385908361_26560?src=search-grid&tracker=organic%7Cundefined%7CYou%20were%20never%20mine%7Cgrid%7CSearch%7C1" target="_blank"><font size="-1">Paytm</a></div>
+    <div class="dropdown_menu_name"> <a href="http://www.amazon.in/were-never-mine-Ashish-Thakur/dp/9385908367/ref=sr_1_1?ie=UTF8&qid=1459242042&sr=8-1&keywords=You+were+never+mine" target="_blank">Amazon</a></div>
+    <div class="dropdown_menu_name"> <a href="http://www.ebay.in/itm/231894756140?ssPageName=STRK:MEUNSOLD:IT" target="_blank">Ebay</a></div>
+	<div class="dropdown_menu_name"><a href="http://www.infibeam.com/Books/you-were-never-mine-ashish-thakur/9789385908361.html#variantId=P-M-B-9789385908361" target="_blank">Infibeam</a></div>
+	<div class="dropdown_menu_name"><a href="http://www.purushottam-bookstore.com/index.php?route=product/product&filter_name=You+were+never+mine&product_id=2742" target="_blank">Purushottam Bookstore</a></div>
+  </div>
+</div></b></td>
+<td width="25%" class="header_name" valign="bottom" align="center" id="page3"><b><h5>Contact</h5></b></td>
 </tr>
 </table>
 </td>
@@ -184,30 +241,32 @@ Apart from writing, Ashish has interest in music and art and is a good singer.
 
 <!-- end bio-->
 <!-- start contact -->
-<form action="#" method="post">
+
 <table width="100%" class="header" id="contact" height="400px" style="margin-top:10px;">
 <tr>
 <td width="40%" class="definition_content" align="center" style="font-family:Arial, Helvetica, sans-serif; color:#b3b3b3">
 
 <b><h2>Let's Talk</h2> 
 Ashish Thakur<br>
-+918961494919<br>
++918963893937<br>
 tashish465@gmail.com</b>
-
+<br><br><br>
+<a href ="mailto:support@railtechindia.in"><input type="button" name="submit" value="Want to say something ?? " class="myButton_submit"></a>
 </td>
-<td width="60%" align="center"><table width="100%"><tr><td width="100%" align="center">
+
+<!--<td width="60%" align="center"><table width="100%"><tr><td width="100%" align="center">
 <input type="text" name="ur_name" placeholder="NAME" style="width:50%;height:30px; font-family:Arial, Helvetica, sans-serif;"></td></tr><tr><td  align="center">
 <input type="text" name="ur_email" placeholder="EMAIL" style="width:50%;height:30px; font-family:Arial, Helvetica, sans-serif;"></td></tr><tr><td align="center">
 <input type="text" name="ur_subject" placeholder="SUBJECT" style="width:50%;height:30px; font-family:Arial, Helvetica, sans-serif;"></td></tr><tr><td align="center">
 <input type="text" name="ur_message" placeholder="MESSAGE" style="width:50%;height:80px; font-family:Arial, Helvetica, sans-serif;"></td></tr>
-<tr><td align="center" height="50px"><input type="submit" name="submit" value="Submit" class="myButton_submit"></td></tr>
-</table></tr>
+<tr><td align="center" height="50px"><a href ="mailto:support@railtechindia.in"><input type="button" name="submit" value="Send Mail" class="myButton_submit"></a></td></tr>
+</table></tr>-->
 </table>
-</form>
-<!--end contact-->
 <table width="100%" class="footer">
-<tr><td width="100%" align="center">Follow Me &nbsp <a href="https://twitter.com/tashish465" target="blank"><img src="images.png" width="20px" height="20px"></a> &nbsp <a href="https://www.facebook.com/profile.php?id=100007016749215" target="blank"><img src="index.jpg" width="20px" height="20px"></a> &nbsp <a href="https://www.instagram.com/tashish465/" target="blank"><img src="insta.png" width="20px" height="20px"></a></td>
+<tr><td width="100%" align="center"><a href="https://twitter.com/tashish465" target="blank"><img src="images.png" width="20px" height="20px"></a> &nbsp <a href="https://www.facebook.com/profile.php?id=100007016749215" target="blank"><img src="index.jpg" width="20px" height="20px"></a> &nbsp <a href="https://www.instagram.com/tashish465/" target="blank"><img src="insta.png" width="20px" height="20px"></a></td>
 </tr>
 </table>
+<!--end contact-->
+
 </body>
 </html>
